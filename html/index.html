@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gianna Hoskins — UX Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+  <div class="ambient ambient-3" aria-hidden="true"></div>
+
+  <nav aria-label="Main navigation">
+    <a href="#" class="nav-logo" aria-label="Gianna Hoskins — home">GH</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+
+    <section class="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="hero-eyebrow"><span aria-hidden="true"></span>UX Engineer &amp; Frontend Developer</p>
+            <h1 class="hero-name">
+              Gianna
+              <em>Hoskins</em>
+            </h1>
+            <p class="hero-role">Design · Engineering · Experience</p>
+            <p class="hero-desc">
+              Bridging design and engineering to build interfaces that feel as good as they look.
+              4+ years shipping production UX across 14,000+ sites.
+            </p>
+            <div class="hero-cta">
+              <a href="#work" class="btn btn-primary">View Work</a>
+              <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orb">
+              <div class="orb-inner-text">
+                <div class="orb-stat">14k+</div>
+                <div class="orb-label">Sites Scaled</div>
+                <div class="orb-divider"></div>
+                <div class="orb-stat">4+</div>
+                <div class="orb-label">Years Experience</div>
+              </div>
+            </div>
+            <div class="floating-tag tag-1">React · TypeScript</div>
+            <div class="floating-tag tag-2">Figma · Design Systems</div>
+            <div class="floating-tag tag-3">AI-Assisted Workflows</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Expertise</p>
+          <h2 id="skills-heading" class="section-title">What I <em>bring</em></h2>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="skill-cell">
+            <div class="skill-cell-label">Frontend</div>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML5/CSS3</span>
+              <span class="skill-tag">Tailwind</span>
+              <span class="skill-tag">SCSS/SASS</span>
+              <span class="skill-tag">Node.js</span>
+            </div>
+          </div>
+          <div class="skill-cell">
+            <div class="skill-cell-label">Design</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Figma Make</span>
+              <span class="skill-tag">Adobe CC</span>
+              <span class="skill-tag">Claude Design</span>
+              <span class="skill-tag">Responsive UI</span>
+              <span class="skill-tag">Design Systems</span>
+              <span class="skill-tag">Prototyping</span>
+            </div>
+          </div>
+          <div class="skill-cell">
+            <div class="skill-cell-label">Performance &amp; Tools</div>
+            <div class="skill-tags">
+              <span class="skill-tag">ADA/WCAG</span>
+              <span class="skill-tag">Lighthouse</span>
+              <span class="skill-tag">WAVE</span>
+              <span class="skill-tag">SEO</span>
+              <span class="skill-tag">PageSpeed</span>
+              <span class="skill-tag">DevTools</span>
+              <span class="skill-tag">Claude</span>
+              <span class="skill-tag">Cursor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <section id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Selected Work</p>
+          <h2 id="work-heading" class="section-title">Things I've <em>made</em></h2>
+        </div>
+        <div class="work-grid">
+
+          <div class="work-card featured reveal">
+            <div>
+              <div class="work-number">01 — Featured</div>
+              <h3 class="work-title">Nearby Communities UX Redesign</h3>
+              <p class="work-desc">
+                Redesigned the page helping apartment seekers discover sister properties — improving scannability, mobile experience, and map interactions across 14,000+ property sites.
+              </p>
+              <div class="work-tags">
+                <span class="work-tag">Figma</span>
+                <span class="work-tag">UX Design</span>
+                <span class="work-tag">Frontend Dev</span>
+              </div>
+              <a href="nearby-communities.html" class="work-link">View Case Study</a>
+            </div>
+            <div class="work-visual" aria-hidden="true">
+              <div class="work-visual-glow"></div>
+              <div class="work-visual-placeholder">✦</div>
+            </div>
+          </div>
+
+          <div class="work-card reveal">
+            <div class="work-number">02</div>
+            <h3 class="work-title">Apartment Homepage UX Improvement</h3>
+            <p class="work-desc">
+              Designed and implemented custom homepage sections to better communicate key selling points and guide users through the leasing journey.
+            </p>
+            <div class="work-tags">
+              <span class="work-tag">UI Design</span>
+              <span class="work-tag">Figma</span>
+              <span class="work-tag">Frontend Dev</span>
+            </div>
+            <a href="apartment-homepage.html" class="work-link">View Case Study</a>
+          </div>
+
+          <div class="work-card reveal">
+            <div class="work-number">03</div>
+            <h3 class="work-title">Design System Implementation</h3>
+            <p class="work-desc">
+              Implemented reusable themes across multiple pages, translating design requirements into consistent, scalable experiences within an existing component system.
+            </p>
+            <div class="work-tags">
+              <span class="work-tag">Frontend</span>
+              <span class="work-tag">Design Systems</span>
+              <span class="work-tag">Component Architecture</span>
+            </div>
+            <a href="design-system.html" class="work-link">View Case Study</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Experience</p>
+          <h2 id="experience-heading" class="section-title">Where I've <em>worked</em></h2>
+        </div>
+        <div class="exp-list">
+
+          <div class="exp-item reveal">
+            <div class="exp-meta">
+              <div class="exp-period">Aug 2021 — Present</div>
+              <div class="exp-company">Apartments247</div>
+              <div class="exp-location">Las Vegas, NV · Remote</div>
+            </div>
+            <div>
+              <div class="exp-role">Front-End Developer</div>
+              <ul class="exp-bullets">
+                <li>Designed and scaled reusable global page components in Figma across a portfolio of 14,000+ property websites</li>
+                <li>Leveraged AI tools including Claude to rapidly prototype and iterate on user flows, accelerating design and implementation cycles</li>
+                <li>Identified and implemented UX improvements across themes and global components, enhancing overall usability at scale</li>
+                <li>Improved accessibility, SEO, and performance using WAVE, Lighthouse, and PageSpeed Insights</li>
+                <li>Translated high-fidelity mockups into production-ready experiences using modern front-end technologies</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item reveal">
+            <div class="exp-meta">
+              <div class="exp-period">Jun 2018 — Aug 2021</div>
+              <div class="exp-company">West Coast Wellness</div>
+              <div class="exp-location">Las Vegas, NV · Remote</div>
+            </div>
+            <div>
+              <div class="exp-role">Marketing Manager / Webmaster</div>
+              <ul class="exp-bullets">
+                <li>Independently designed, built, and launched a company e-commerce site featuring 580+ products using WordPress, Elementor, and WooCommerce</li>
+                <li>Optimized site structure and user flow to improve usability and streamline the online purchasing experience</li>
+                <li>Improved search visibility by implementing SEO best practices across website and blog content</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="reveal">
+            <h2 id="contact-heading" class="contact-title">
+              Let's
+              <em>connect</em>
+            </h2>
+            <p class="contact-sub">
+              Open to full-time UX Engineer and Product Designer roles.
+              I bring both the design eye and the frontend skills to ship polished experiences end-to-end.
+            </p>
+            <a href="mailto:giannahoskins@gmail.com" class="btn btn-primary">Say Hello</a>
+          </div>
+          <div class="contact-links reveal">
+            <a href="mailto:giannahoskins@gmail.com" class="contact-link">
+              <div class="contact-link-icon" aria-hidden="true">✉</div>
+              giannahoskins@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/gianna-hoskins/" class="contact-link" target="_blank" rel="noopener noreferrer">
+              <div class="contact-link-icon" aria-hidden="true">in</div>
+              linkedin.com/in/gianna-hoskins
+            </a>
+            <a href="tel:7028836037" class="contact-link">
+              <div class="contact-link-icon" aria-hidden="true">☎</div>
+              702-883-6037
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">© 2026 Gianna Hoskins. All rights reserved.</div>
+        <div class="footer-name">Gianna Hoskins</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+// ─── Custom Cursor ────────────────────────────────────────
+
+.cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--glow2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  box-shadow: 0 0 12px var(--glow2), 0 0 24px var(--glow);
+}
+
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(180, 140, 255, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s ease;
+}
+
+// ─── Starfield ────────────────────────────────────────────
+
+#stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+// ─── Ambient Glows ────────────────────────────────────────
+
+.ambient {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(140, 80, 255, 0.12) 0%, transparent 70%);
+  top: -200px;
+  left: -200px;
+  animation: drift1 20s ease-in-out infinite alternate;
+}
+
+.ambient-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(232, 170, 255, 0.08) 0%, transparent 70%);
+  bottom: 0;
+  right: -100px;
+  animation: drift2 25s ease-in-out infinite alternate;
+}
+
+.ambient-3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(127, 255, 212, 0.05) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  animation: drift3 18s ease-in-out infinite alternate;
+}
+
+// ─── Nav ──────────────────────────────────────────────────
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(8, 6, 16, 0.9), transparent);
+  backdrop-filter: blur(10px);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--accent2);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+
+  a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+
+    &:hover { color: var(--accent2); }
+  }
+}
+
+.nav-back {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+
+  &::before { content: '←'; }
+  &:hover { color: var(--accent2); }
+}
+
+// ─── Footer ───────────────────────────────────────────────
+
+footer {
+  position: relative;
+  z-index: 2;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+// ─── Mobile ───────────────────────────────────────────────
+
+@media (max-width: 768px) {
+  nav { padding: 20px 24px; }
+
+  .container,
+  .container-wide { padding: 0 24px; }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}

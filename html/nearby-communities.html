@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nearby Communities UX Redesign — Gianna Hoskins</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/case-study.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Gianna Hoskins — home">GH</a>
+    <a href="index.html#work" class="nav-back">All Work</a>
+  </nav>
+
+  <main id="main">
+
+    <div class="hero">
+      <div class="container">
+        <div class="hero-meta">
+          <span class="hero-tag">UX Design</span>
+          <span class="hero-dot" aria-hidden="true"></span>
+          <span class="hero-tag">Frontend</span>
+          <span class="hero-dot" aria-hidden="true"></span>
+          <span class="hero-date">Apartments247 · 2024</span>
+        </div>
+        <h1 class="hero-title">
+          Nearby Communities
+          <em>UX Redesign</em>
+        </h1>
+        <p class="hero-summary">
+          Redesigning the page that helps apartment seekers discover sister properties — improving scannability, mobile experience, and map interactions across a platform serving 14,000+ property sites.
+        </p>
+        <div class="hero-stats" aria-label="Project summary">
+          <div class="hero-stat">
+            <div class="hero-stat-value">14k+</div>
+            <div class="hero-stat-label">Sites Affected</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">1–2 wks</div>
+            <div class="hero-stat-label">Timeline</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">Design + Build</div>
+            <div class="hero-stat-label">My Role</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-image container-wide">
+      <img src="uploads/header-img.png" alt="Redesigned Nearby Communities page showing map and community cards side by side" />
+    </div>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- OVERVIEW -->
+    <section aria-labelledby="overview-heading">
+      <div class="container">
+        <div class="overview-grid reveal">
+          <div>
+            <p class="section-label">Overview</p>
+            <h2 id="overview-heading" class="section-title">The <em>Problem</em></h2>
+            <p class="body-text">
+              The existing Nearby Communities page lacked clear structure, making it difficult for prospective renters to quickly browse and compare sister properties. Key information wasn't prioritized, the map had broken interactions, and the mobile experience was essentially unusable — map and listings were stacked with no way to switch between them.
+            </p>
+            <p class="body-text">
+              I was brought in to redesign the page within the existing platform and component system — leading both the Figma design work and the frontend implementation.
+            </p>
+          </div>
+          <div>
+            <div class="role-card">
+              <div class="role-card-label">My Role</div>
+              <div class="role-card-value">UX Designer + Frontend Developer</div>
+              <div class="role-card-desc">
+                Led end-to-end — from identifying UX problems and designing solutions in Figma, through to implementing the production-ready frontend. Collaborated with my manager through multiple feedback cycles.
+              </div>
+              <div class="role-pills">
+                <span class="role-pill">Figma</span>
+                <span class="role-pill">UX Design</span>
+                <span class="role-pill">Frontend Dev</span>
+                <span class="role-pill">Component Systems</span>
+              </div>
+            </div>
+
+            <div class="role-card" style="border-top: none;">
+              <div class="role-card-label">Constraints</div>
+              <ul class="constraints-list">
+                <li>Built within an existing platform and component system</li>
+                <li>Limited flexibility in layout and functionality</li>
+                <li>Worked within pre-existing design patterns and structure</li>
+                <li>Required to support dynamic content and multiple listings</li>
+                <li>Required to support multiple themes consistently</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- DESIGN DECISIONS -->
+    <section class="ba-section" aria-labelledby="decisions-heading">
+      <div class="container">
+        <div class="ba-header reveal">
+          <p class="section-label">Design Process</p>
+          <h2 id="decisions-heading" class="section-title">The <em>Decisions</em></h2>
+          <p class="ba-context">
+            Working within the constraints of an established component system meant every design decision had to be deliberate. I focused on four key areas where the existing experience was creating the most friction for users.
+          </p>
+        </div>
+
+        <!-- 01 -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">01</span>
+            <h3 class="ba-block-title">Card <em>Scannability</em></h3>
+          </div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <span class="ba-side-label before">Before</span>
+              <img src="uploads/old-card.png" alt="Original community card with no visual hierarchy — distance, address, phone, and floor plans stacked with equal weight" />
+            </div>
+            <div class="ba-side">
+              <span class="ba-side-label after">After</span>
+              <img src="uploads/card-w-website.png" alt="Redesigned community card with clear image, grouped contact info with icons, and a View Website CTA" />
+            </div>
+          </div>
+          <p class="ba-insight">
+            The original card listed information in a vertical stack with no visual hierarchy — distance, address, phone, and floor plans were all weighted equally. I restructured the layout to lead with the property image and community name, grouped contact info with icons for quick recognition, and added a direct "View Website" CTA that was previously missing entirely.
+          </p>
+        </div>
+
+        <!-- 02 -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">02</span>
+            <h3 class="ba-block-title">Map <em>Markers &amp; Popups</em></h3>
+          </div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <span class="ba-side-label before">Before</span>
+              <img src="uploads/old-icons.png" alt="Original map with decorative star-shaped markers that don't follow standard mapping conventions" />
+            </div>
+            <div class="ba-side">
+              <span class="ba-side-label after">After</span>
+              <img src="uploads/pop-up-w-website.png" alt="Redesigned map popup with address, distance, a close button, and a View Website CTA" />
+            </div>
+          </div>
+          <p class="ba-insight">
+            The original map used decorative star icons that were visually noisy and didn't follow standard mapping conventions. Popups had no way to close them and no actionable links. I replaced the icons with clean numbered markers and rebuilt the popup to include a dismiss button and "View Website" action, reducing friction for users ready to explore a property.
+          </p>
+        </div>
+
+        <!-- 03 -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">03</span>
+            <h3 class="ba-block-title">Popup <em>Interactions</em></h3>
+          </div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <span class="ba-side-label before">Before</span>
+              <img src="uploads/no-way-to-close-out.png" alt="Old map popup with no close button, blocking the map view with no way to dismiss" />
+            </div>
+            <div class="ba-side">
+              <span class="ba-side-label after">After</span>
+              <img src="uploads/pop-up.png" alt="New popup with a clear close (×) button and styled View Website CTA" />
+            </div>
+          </div>
+          <p class="ba-insight">
+            Once a map popup opened, users had no way to dismiss it — it would sit on the map blocking the view. The redesigned popup includes an explicit close (×) button and a styled "View Website" CTA, making the interaction feel intentional rather than broken.
+          </p>
+        </div>
+
+        <!-- 04 -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">04</span>
+            <h3 class="ba-block-title">Mobile <em>Experience</em></h3>
+          </div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <span class="ba-side-label before">Before</span>
+              <img src="uploads/no-separation-on-mobile.png" alt="Original mobile layout with map and listings stacked vertically with no way to switch between views" />
+            </div>
+            <div class="ba-side">
+              <span class="ba-side-label after" style="top:auto; bottom:16px;">After</span>
+              <img src="uploads/mobile-list-view.png" alt="Redesigned mobile list view with Map and List tab toggle for easy switching" />
+            </div>
+          </div>
+          <p class="ba-insight">
+            On mobile, the original layout stacked the map directly above the community cards with no visual separation. I introduced a tab-based Map / List toggle, allowing users to switch between views without losing context — a pattern familiar from apps like Google Maps that dramatically reduces cognitive load on small screens.
+          </p>
+        </div>
+
+        <!-- 05 -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">05</span>
+            <h3 class="ba-block-title">Desktop <em>Layout</em></h3>
+          </div>
+          <div class="ba-grid">
+            <div class="ba-side">
+              <span class="ba-side-label before">Before</span>
+              <img src="uploads/old-sisters-page.png" alt="Original desktop layout with full-width map above community card grid, requiring constant scrolling" />
+            </div>
+            <div class="ba-side">
+              <span class="ba-side-label after">After</span>
+              <img src="uploads/new-sisters-page.png" alt="Redesigned desktop layout showing map and community list side by side with numbered pins matching the list" />
+            </div>
+          </div>
+          <p class="ba-insight">
+            The original desktop layout placed the map full-width above a grid of cards, forcing users to scroll up and down to cross-reference the two. The redesigned layout shows map and list side by side, so clicking a marker immediately highlights the corresponding card. Updated numbered pins match the list, creating a cohesive spatial relationship between both views.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- OUTCOME -->
+    <section aria-labelledby="outcome-heading">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">Final Outcome</p>
+          <div class="outcome-box">
+            <h2 id="outcome-heading" class="outcome-title">Clearer, faster, <em>more useful</em></h2>
+            <p class="outcome-text">
+              The redesign introduced clearer information hierarchy, more intuitive map interactions, and a dramatically improved mobile experience — making it easier for prospective renters to browse, compare, and take action on nearby properties.
+            </p>
+            <p class="outcome-text">
+              Every change was made within the constraints of an existing component system and designed to work across multiple property themes — a real-world constraint that shaped every decision and required careful prioritization throughout.
+            </p>
+            <div class="outcome-pills">
+              <span class="outcome-pill">Improved scannability</span>
+              <span class="outcome-pill">Mobile map/list toggle</span>
+              <span class="outcome-pill">Actionable map popups</span>
+              <span class="outcome-pill">Consistent cross-theme</span>
+              <span class="outcome-pill">Reduced friction</span>
+            </div>
+            <div class="status-note">
+              <span class="status-dot" aria-hidden="true"></span>
+              Pending stakeholder approval for production release
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <div class="container">
+      <div class="project-nav-inner">
+        <a href="index.html#work" class="project-nav-link">
+          <span class="project-nav-direction">← Previous</span>
+          <span class="project-nav-title">All Projects</span>
+        </a>
+        <a href="index.html#work" class="project-nav-home">Back to Portfolio</a>
+        <a href="apartment-homepage.html" class="project-nav-link next">
+          <span class="project-nav-direction">Next →</span>
+          <span class="project-nav-title">Apartment Homepage UX</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
