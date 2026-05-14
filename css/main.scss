@@ -1,7 +1,5 @@
 // ─── main.scss ────────────────────────────────────────────
-// Entry point for the homepage. Compile this file with Prepros.
-
-@use 'variables';
-@use 'base';
-@use 'components';
-@use 'home';
+@import './partials/variables';
+@import './partials/base';
+@import './partials/components';
+@import './partials/home';

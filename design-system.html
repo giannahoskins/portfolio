@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System Implementation — Gianna Hoskins</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/case-study.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Gianna Hoskins — home">GH</a>
+    <a href="index.html#work" class="nav-back">All Work</a>
+  </nav>
+  <main id="main">
+    <div class="hero">
+      <div class="container">
+        <div class="hero-meta">
+          <span class="hero-tag">Frontend Development</span>
+          <span class="hero-dot" aria-hidden="true"></span>
+          <span class="hero-tag">Design Systems</span>
+          <span class="hero-dot" aria-hidden="true"></span>
+          <span class="hero-date">Apartments247 · 2023</span>
+        </div>
+        <h1 class="hero-title">
+          Design System
+          <em>Implementation</em>
+        </h1>
+        <p class="hero-summary">
+          Translating predefined designs into production-ready frontend experiences — ensuring visual accuracy, responsiveness, and consistency across multiple pages within a shared component system.
+        </p>
+        <div class="hero-stats" aria-label="Project summary">
+          <div class="hero-stat">
+            <div class="hero-stat-value">Multi-page</div>
+            <div class="hero-stat-label">Scope</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">Frontend</div>
+            <div class="hero-stat-label">My Role</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">Live</div>
+            <div class="hero-stat-label">Status</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-image century-header container-wide">
+      <img src="uploads/century-full-page.png" alt="Full page view of The Century Oxford apartment website showing hero, navigation sections, amenities, floor plans, and footer" />
+    </div>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- OVERVIEW -->
+    <section aria-labelledby="overview-heading">
+      <div class="container">
+        <div class="overview-grid reveal">
+          <div>
+            <p class="section-label">Overview</p>
+            <h2 id="overview-heading" class="section-title">The <em>Challenge</em></h2>
+            <p class="body-text">
+              This project involved implementing a fully designed apartment community website — The Century Oxford — within the Apartments247 platform and component system. The designs were provided; my role was to translate them into a pixel-accurate, responsive, production-ready frontend experience.
+            </p>
+            <p class="body-text">
+              The challenge wasn't designing from scratch — it was faithfully executing someone else's vision while working within a predefined framework, making implementation decisions where the design didn't perfectly map to the platform's capabilities, and ensuring everything held together consistently across multiple page types and screen sizes.
+            </p>
+          </div>
+          <div>
+            <div class="role-card">
+              <div class="role-card-label">My Role</div>
+              <div class="role-card-value">Frontend Developer</div>
+              <div class="role-card-desc">
+                Responsible for translating design files into production-ready experiences — ensuring visual accuracy, responsiveness, and consistency within the platform's component system across all page types.
+              </div>
+              <div class="role-pills">
+                <span class="role-pill">HTML/CSS</span>
+                <span class="role-pill">JavaScript</span>
+                <span class="role-pill">Responsive Design</span>
+                <span class="role-pill">Component Systems</span>
+              </div>
+            </div>
+
+            <div class="role-card" style="border-top: none;">
+              <div class="role-card-label">Constraints</div>
+              <ul class="constraints-list">
+                <li>Predefined designs — not created by me</li>
+                <li>Existing framework and component system</li>
+                <li>Work spans multiple page types</li>
+                <li>Required to support dynamic content</li>
+                <li>Limited flexibility in layout and styling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- IMPLEMENTATION -->
+    <section aria-labelledby="impl-heading">
+      <div class="container">
+        <div class="ba-header reveal">
+          <p class="section-label">Implementation</p>
+          <h2 id="impl-heading" class="section-title">The <em>Approach</em></h2>
+          <p class="ba-context">
+            Implementing predefined designs faithfully requires a different skill set than designing from scratch — it demands precision, problem-solving within constraints, and the ability to make smart decisions when the design and platform don't perfectly align.
+          </p>
+        </div>
+
+        <!-- 01 Hero -->
+        <div class="impl-block reveal">
+          <div class="impl-label-row">
+            <span class="ba-number" aria-hidden="true">01</span>
+            <h3 class="ba-block-title">Hero & <em>Navigation</em></h3>
+          </div>
+          <div class="impl-grid">
+            <div>
+              <img src="uploads/century-hero.png" alt="Desktop hero section showing The Century Oxford logo, navigation bar, hero image of the pool, and Live In Style headline with three category links below" />
+            </div>
+            <div>
+              <img src="uploads/mobile-century-hero.png" alt="Mobile view of The Century Oxford hero section with hamburger menu, logo, hero image, and Live In Style headline" />
+            </div>
+          </div>
+          <p class="ba-insight">
+            The hero required careful attention to spacing, typography, and the stacked navigation structure — matching the original design's elegant, spaced-out aesthetic while ensuring the layout adapted cleanly to mobile. On mobile the desktop nav collapses to a hamburger menu and the hero image fills the viewport edge to edge. Ensuring the brand logo, utility bar, and main nav all stacked correctly at different breakpoints required careful CSS work within the platform's constraints.
+          </p>
+        </div>
+
+        <!-- 02 Content Sections -->
+        <div class="impl-block reveal">
+          <div class="impl-label-row">
+            <span class="ba-number" aria-hidden="true">02</span>
+            <h3 class="ba-block-title">Content <em>Sections</em></h3>
+          </div>
+          <div class="impl-grid">
+            <div>
+              <img src="uploads/century-hpt.png" alt="Second To None and Iconic Extras content sections showing the alternating light and dark backgrounds with large typography and property images" />
+            </div>
+            <div>
+              <img src="uploads/century-amenities.png" alt="Iconic Extras amenities section with dark background, large headline, descriptive copy, and property kitchen photo" />
+            </div>
+          </div>
+          <p class="ba-insight">
+            The content sections use alternating light and dark backgrounds to create visual rhythm and separation — a pattern that needed to be implemented consistently across multiple page types. Each section pairs large, spaced typography with property photography. A key implementation challenge here was the numbered scroll indicator on the left side, which required careful positioning to sit correctly across different content heights. I matched the original design's typographic spacing and weight hierarchy as closely as the platform allowed.
+          </p>
+        </div>
+
+        <!-- 03 Floor Plans -->
+        <div class="impl-block reveal">
+          <div class="impl-label-row">
+            <span class="ba-number" aria-hidden="true">03</span>
+            <h3 class="ba-block-title">Floor Plan <em>Section</em></h3>
+          </div>
+          <div class="impl-grid-single">
+            <img src="uploads/century-ffp.png" alt="Modern Options floor plan section showing large headline, descriptive text, featured 1 Bed 1 Bath floor plan with interior photo, floor plan diagram, and navigation arrows" />
+          </div>
+          <p class="ba-insight">
+            The floor plan section required implementing a carousel-style swiper within the platform's existing floor plan component. The design called for a split layout pairing an interior lifestyle photo with a floor plan diagram, plus navigation arrows for browsing units. Matching the design's specific typographic treatment — spaced all-caps labels, large serif headlines, minimal pricing info — while working within the component's data structure was the primary challenge here.
+          </p>
+        </div>
+
+        <!-- 04 Cross-theme consistency -->
+        <div class="impl-block reveal">
+          <div class="impl-label-row">
+            <span class="ba-number" aria-hidden="true">04</span>
+            <h3 class="ba-block-title">Cross-Theme <em>Consistency</em></h3>
+          </div>
+          <div class="impl-grid-single ds-img-4">
+            <img src="uploads/century-full-page.png" alt="Full page view of The Century Oxford showing all sections from hero through footer, demonstrating consistent visual treatment across the entire page" style="max-height: 600px;" />
+          </div>
+          <p class="ba-insight">
+            One of the most important aspects of this implementation was ensuring the design held together end-to-end — from the utility bar at the top through to the footer. The platform serves thousands of properties, each with its own theme, so all implementation decisions had to work within shared components without breaking other themes. This required understanding which styles were global versus local, and making targeted overrides that didn't create unintended side effects elsewhere in the system.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- OUTCOME -->
+    <section aria-labelledby="outcome-heading">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">Final Outcome</p>
+          <div class="outcome-box">
+            <h2 id="outcome-heading" class="outcome-title">Design to production, <em>faithfully executed</em></h2>
+            <p class="outcome-text">
+              The Century Oxford site was successfully implemented as a production-ready experience that closely matches the provided designs while working within the constraints of the Apartments247 platform. The result is a polished, responsive site that maintains visual consistency across all page types and screen sizes.
+            </p>
+            <p class="outcome-text">
+              This project demonstrates a different but equally important skillset from design work — the precision, technical judgment, and platform knowledge required to translate a creative vision into a live, functioning product without losing fidelity along the way.
+            </p>
+            <div class="outcome-pills">
+              <span class="outcome-pill">Pixel-accurate implementation</span>
+              <span class="outcome-pill">Fully responsive</span>
+              <span class="outcome-pill">Dynamic content support</span>
+              <span class="outcome-pill">Live in production</span>
+            </div>
+            <div style="margin-top: 32px;">
+              <a href="https://century-oxford.aptdemo.com/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">View Live Site →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <div class="container">
+      <div class="project-nav-inner">
+        <a href="apartment-homepage.html" class="project-nav-link">
+          <span class="project-nav-direction">← Previous</span>
+          <span class="project-nav-title">Apartment Homepage UX</span>
+        </a>
+        <a href="index.html#work" class="project-nav-home">Back to Portfolio</a>
+        <a href="nearby-communities.html" class="project-nav-link next">
+          <span class="project-nav-direction">Next →</span>
+          <span class="project-nav-title">Nearby Communities UX</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

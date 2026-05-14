@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apartment Homepage UX Improvement — Gianna Hoskins</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/case-study.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Gianna Hoskins — home">GH</a>
+    <a href="index.html#work" class="nav-back">All Work</a>
+  </nav>
+
+  <main id="main">
+
+    <div class="hero">
+      <div class="container">
+        <div class="hero-meta">
+          <span class="hero-tag">UX Design</span>
+          <span class="hero-dot" aria-hidden="true"></span>
+          <span class="hero-tag">Frontend</span>
+          <span class="hero-dot" aria-hidden="true"></span>
+          <span class="hero-date">Apartments247 · 2026</span>
+        </div>
+        <h1 class="hero-title">
+          Apartment Homepage
+          <em>UX Improvement</em>
+        </h1>
+        <p class="hero-summary">
+          Designed and implemented custom homepage sections to better communicate key selling points and guide prospective renters through the leasing journey — turning a generic page into a compelling, scannable experience.
+        </p>
+        <div class="hero-stats" aria-label="Project summary">
+          <div class="hero-stat">
+            <div class="hero-stat-value">4</div>
+            <div class="hero-stat-label">Sections Designed</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">Design + Build</div>
+            <div class="hero-stat-label">My Role</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">Live</div>
+            <div class="hero-stat-label">Status</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-image container-wide">
+      <img src="uploads/hpt-section.png" alt="Designed homepage section showing Why Residents Choose These Apartments with a 2x3 benefits grid alongside a property interior photo" />
+    </div>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- OVERVIEW -->
+    <section aria-labelledby="overview-heading">
+      <div class="container">
+        <div class="overview-grid reveal">
+          <div>
+            <p class="section-label">Overview</p>
+            <h2 id="overview-heading" class="section-title">The <em>Problem</em></h2>
+            <p class="body-text">
+              The homepage lacked clear structure for communicating key value propositions, making it difficult for prospective renters to quickly understand what sets the community apart and what actions they should take next.
+            </p>
+            <p class="body-text">
+              Generic apartment homepages tend to lead with photos and basic info — but fail to tell a story or give users a reason to choose this community over others. I designed and built a series of custom sections that gave the page a clear narrative arc: here's why this place is special, here's what you get, here's the neighborhood, here's how to take action.
+            </p>
+          </div>
+          <div>
+            <div class="role-card">
+              <div class="role-card-label">My Role</div>
+              <div class="role-card-value">UX Designer + Frontend Developer</div>
+              <div class="role-card-desc">
+                Designed each section in Figma, then built and implemented them as production-ready frontend components within the existing platform and component system.
+              </div>
+              <div class="role-pills">
+                <span class="role-pill">Figma</span>
+                <span class="role-pill">UX Design</span>
+                <span class="role-pill">Frontend Dev</span>
+                <span class="role-pill">Content Strategy</span>
+              </div>
+            </div>
+
+            <div class="role-card" style="border-top: none;">
+              <div class="role-card-label">Constraints</div>
+              <ul class="constraints-list">
+                <li>Built within an existing platform and component system</li>
+                <li>Limited flexibility in layout and styling</li>
+                <li>Needed to incorporate specific marketing content provided by the client</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- DESIGN DECISIONS -->
+    <section aria-labelledby="decisions-heading">
+      <div class="container">
+        <div class="ba-header reveal">
+          <p class="section-label">Design Decisions</p>
+          <h2 id="decisions-heading" class="section-title">The <em>Sections</em></h2>
+          <p class="ba-context">
+            Each section was designed to serve a specific purpose in the user journey — moving prospective renters from awareness to action through a clear, scannable narrative.
+          </p>
+        </div>
+
+        <!-- 01 Benefits Grid -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">01</span>
+            <h3 class="ba-block-title">Benefits <em>Grid</em></h3>
+          </div>
+          <div class="showcase-image">
+            <img src="uploads/hpt-section.png" alt="Why Residents Choose These Apartments section showing a 2x3 grid of benefit cards with icons and descriptions alongside a property photo" />
+          </div>
+          <p class="ba-insight">
+            The homepage previously had no structured way to communicate the community's primary benefits. I introduced a split-layout section pairing a 2×3 benefits grid with a lifestyle photo — allowing users to quickly scan what makes this property worth considering without having to read large blocks of text. Each card pairs a custom icon with a headline and short description, keeping the cognitive load low while communicating a lot of information efficiently. The "See It In Person — Book A Tour" CTA at the bottom provides a natural next step.
+          </p>
+        </div>
+
+        <!-- 02 Dog Section -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">02</span>
+            <h3 class="ba-block-title">Targeted <em>Audience Section</em></h3>
+          </div>
+          <div class="showcase-image">
+            <img src="uploads/dog-section.png" alt="Henderson's Best Community For Dogs section with dog photo, bullet points highlighting pet amenities, and a Bring Your Pup For A Tour CTA" />
+          </div>
+          <p class="ba-insight">
+            Pet owners are a key audience segment for this property and the original homepage did nothing to speak to them directly. I structured the provided content into a dedicated section that leads with an engaging photo, highlights specific pet-friendly features with clear benefit-focused copy, and ends with a targeted CTA — "Bring Your Pup For A Tour." Calling out this audience explicitly makes the content feel relevant and personal rather than generic.
+          </p>
+        </div>
+
+        <!-- 03 Amenities -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">03</span>
+            <h3 class="ba-block-title">Amenities <em>Grid</em></h3>
+          </div>
+          <div class="showcase-image">
+            <img src="uploads/amenities-section.png" alt="Everything You Need amenities section with a structured 2-column grid of amenities with icons" style="object-position: center 60%;" />
+          </div>
+          <p class="ba-insight">
+            Rather than listing amenities in a plain text block, I grouped them into a structured two-column grid with icons — reducing cognitive load and making it much easier for users to quickly scan and assess whether the property meets their needs. The "Everything You Need" headline frames the list as a promise rather than a feature dump, which subtly shifts the tone toward benefit-first communication.
+          </p>
+        </div>
+
+        <!-- 04 Neighborhood + CTA -->
+        <div class="ba-block reveal">
+          <div class="ba-label-row">
+            <span class="ba-number" aria-hidden="true">04</span>
+            <h3 class="ba-block-title">Neighborhood &amp; <em>Call to Action</em></h3>
+          </div>
+          <div class="showcase-image">
+            <img src="uploads/neighborhood-section.png" alt="A Neighborhood That Feels Like Home dark section with location benefits and Explore The Neighborhood CTA, followed by a Ready To Live Large closing section" style="object-position: center 85%;" />
+          </div>
+          <p class="ba-insight">
+            The neighborhood section uses a dark background with a subtle aerial photo to create visual contrast and signal a shift in content — this is about the area, not just the building. The closing "Ready To Live Large?" section provides dual CTAs (Schedule A Tour and View Floor Plans) that give users clear next steps depending on where they are in their decision process. Together these two sections complete the page's narrative arc and guide users toward conversion.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- OUTCOME -->
+    <section aria-labelledby="outcome-heading">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">Final Outcome</p>
+          <div class="outcome-box">
+            <h2 id="outcome-heading" class="outcome-title">A page that <em>tells a story</em></h2>
+            <p class="outcome-text">
+              The redesigned homepage transforms a generic property page into a structured, benefit-led experience. Each section serves a specific role in guiding prospective renters — from understanding why this community is special, to visualizing the lifestyle it offers, to taking action.
+            </p>
+            <p class="outcome-text">
+              By structuring and prioritizing information thoughtfully, the final design improves scannability, highlights key value propositions, and guides users toward meaningful actions — all within the constraints of an existing platform and component system.
+            </p>
+            <div class="outcome-pills">
+              <span class="outcome-pill">Benefit-led narrative</span>
+              <span class="outcome-pill">Targeted audience sections</span>
+              <span class="outcome-pill">Scannable amenities grid</span>
+              <span class="outcome-pill">Clear conversion CTAs</span>
+              <span class="outcome-pill">Live in production</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="project-nav" aria-label="Project navigation">
+    <div class="container">
+      <div class="project-nav-inner">
+        <a href="nearby-communities.html" class="project-nav-link">
+          <span class="project-nav-direction">← Previous</span>
+          <span class="project-nav-title">Nearby Communities UX</span>
+        </a>
+        <a href="index.html#work" class="project-nav-home">Back to Portfolio</a>
+        <a href="design-system.html" class="project-nav-link next">
+          <span class="project-nav-direction">Next →</span>
+          <span class="project-nav-title">Design System Implementation</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

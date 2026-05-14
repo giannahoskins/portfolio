@@ -1,6 +1,8 @@
-// ─── Base & Reset ─────────────────────────────────────────
+// ─── Reset ────────────────────────────────────────────────
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -20,17 +22,17 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   cursor: none;
-}
 
-// Noise texture overlay
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.025;
-  z-index: 1;
-  pointer-events: none;
+  // Noise texture overlay
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    z-index: 1;
+    pointer-events: none;
+  }
 }
 
 // ─── Accessibility ────────────────────────────────────────
@@ -48,7 +50,9 @@ body::before {
   transition: top 0.2s;
   text-decoration: none;
 
-  &:focus { top: 16px; }
+  &:focus {
+    top: 16px;
+  }
 }
 
 :focus-visible {
@@ -57,35 +61,38 @@ body::before {
   border-radius: 2px;
 }
 
-:focus:not(:focus-visible) { outline: none; }
+:focus:not(:focus-visible) {
+  outline: none;
+}
 
 // ─── Reduced Motion ───────────────────────────────────────
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 
   .cursor,
-  .cursor-ring { display: none; }
+  .cursor-ring {
+    display: none;
+  }
 
-  body { cursor: auto; }
+  body {
+    cursor: auto;
+  }
 }
 
 // ─── Layout ───────────────────────────────────────────────
 
-.container {
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
+.container,
 .container-wide {
   position: relative;
   z-index: 2;
@@ -151,7 +158,7 @@ body::before {
   }
 }
 
-// ─── Section Base ─────────────────────────────────────────
+// ─── Shared Section Elements ──────────────────────────────
 
 .section-label {
   font-size: 10px;
@@ -172,19 +179,6 @@ body::before {
   }
 }
 
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(36px, 4vw, 52px);
-  font-weight: 300;
-  line-height: 1.1;
-  color: var(--text);
-
-  em {
-    font-style: italic;
-    color: var(--accent);
-  }
-}
-
 // ─── Buttons ──────────────────────────────────────────────
 
 .btn {
@@ -198,28 +192,28 @@ body::before {
   border-radius: 2px;
   transition: all 0.3s;
   cursor: none;
-}
 
-.btn-primary {
-  background: var(--glow);
-  color: var(--bg);
-  font-weight: 400;
-  box-shadow: 0 0 20px rgba(180, 140, 255, 0.3);
+  &-primary {
+    background: var(--glow);
+    color: var(--bg);
+    font-weight: 400;
+    box-shadow: 0 0 20px rgba(180, 140, 255, 0.3);
 
-  &:hover {
-    background: var(--glow2);
-    box-shadow: 0 0 40px rgba(180, 140, 255, 0.5);
-    transform: translateY(-1px);
+    &:hover {
+      background: var(--glow2);
+      box-shadow: 0 0 40px rgba(180, 140, 255, 0.5);
+      transform: translateY(-1px);
+    }
   }
-}
 
-.btn-ghost {
-  border: 1px solid var(--border);
-  color: var(--text-muted);
+  &-ghost {
+    border: 1px solid var(--border);
+    color: var(--text-muted);
 
-  &:hover {
-    border-color: var(--glow);
-    color: var(--accent);
-    box-shadow: 0 0 20px rgba(180, 140, 255, 0.1);
+    &:hover {
+      border-color: var(--glow);
+      color: var(--accent);
+      box-shadow: 0 0 20px rgba(180, 140, 255, 0.1);
+    }
   }
 }

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#080610"/>
+  <text
+    x="50%"
+    y="50%"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="13"
+    font-weight="300"
+    font-style="italic"
+    fill="#c9a0ff"
+    text-anchor="middle"
+    dominant-baseline="central"
+    letter-spacing="2"
+  >GH</text>
+</svg>

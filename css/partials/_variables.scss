@@ -1,15 +1,16 @@
 // ─── Colors ───────────────────────────────────────────────
-$bg:         #080610;
-$bg2:        #0d0a1a;
-$surface:    #110e22;
-$surface2:   #1a1530;
-$glow:       #b48cff;
-$glow2:      #e8aaff;
-$accent:     #c9a0ff;
-$accent2:    #f0c4ff;
-$rose:       #ff8fa3;
-$teal:       #7fffd4;
-$text:       #e8deff;
+
+$bg:      #080610;
+$bg2:     #0d0a1a;
+$surface: #110e22;
+$surface2:#1a1530;
+$glow:    #b48cff;
+$glow2:   #e8aaff;
+$accent:  #c9a0ff;
+$accent2: #f0c4ff;
+$rose:    #ff8fa3;
+$teal:    #7fffd4;
+$text:    #e8deff;
 
 // Opacity variants
 $text-muted: rgba(232, 222, 255, 0.72);
@@ -17,34 +18,34 @@ $text-dim:   rgba(232, 222, 255, 0.48);
 $border:     rgba(180, 140, 255, 0.12);
 
 // ─── Typography ───────────────────────────────────────────
+
 $font-display: 'Cormorant Garamond', serif;
 $font-mono:    'DM Mono', monospace;
 
 // ─── Spacing ──────────────────────────────────────────────
-$container-max:      1100px;
-$container-max-wide: 1100px;
-$container-padding:  40px;
-$section-padding:    120px;
 
-// ─── Breakpoints ──────────────────────────────────────────
-$bp-mobile: 768px;
+$container-max:     1100px;
+$container-padding: 40px;
+$section-padding:   120px;
+$bp-mobile:         768px;
 
 // ─── CSS Custom Properties (for runtime use) ──────────────
+
 :root {
-  --bg:         #{$bg};
-  --bg2:        #{$bg2};
-  --surface:    #{$surface};
-  --surface2:   #{$surface2};
-  --border:     #{$border};
-  --glow:       #{$glow};
-  --glow2:      #{$glow2};
-  --accent:     #{$accent};
-  --accent2:    #{$accent2};
-  --rose:       #{$rose};
-  --teal:       #{$teal};
-  --text:       #{$text};
-  --text-muted: #{$text-muted};
-  --text-dim:   #{$text-dim};
+  --bg:           #{$bg};
+  --bg2:          #{$bg2};
+  --surface:      #{$surface};
+  --surface2:     #{$surface2};
+  --border:       #{$border};
+  --glow:         #{$glow};
+  --glow2:        #{$glow2};
+  --accent:       #{$accent};
+  --accent2:      #{$accent2};
+  --rose:         #{$rose};
+  --teal:         #{$teal};
+  --text:         #{$text};
+  --text-muted:   #{$text-muted};
+  --text-dim:     #{$text-dim};
   --font-display: #{$font-display};
   --font-mono:    #{$font-mono};
 }
