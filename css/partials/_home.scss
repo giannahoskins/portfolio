@@ -404,6 +404,15 @@ section {
     }
   }
 
+  &-card-preview {
+    aspect-ratio: 16 / 10;
+    margin-bottom: 28px;
+
+    img {
+      object-position: center top;
+    }
+  }
+
   &-visual-glow {
     position: absolute;
     inset: 0;
